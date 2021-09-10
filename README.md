@@ -3,19 +3,19 @@ R0-GR combat droid module deploy attack based in protocols to select targets and
 
 ### Index
 * [Installation](#installation)
-* [v1 : programming interface](#v1-programming-interface)
+* [v1 : programming interface][001]
   + [code structure](#code-structure)
   + [module functiolaty](#module-functiolaty)
-* [v0 : The Pseudo Code](#v0-the-pseudo-code)
+* [v0 : The Pseudo Code][002]
   + [Assumptions](#assumptions)
   + [Weapon response](#weapon-response)
     - [protocols like flags](#protocols-like-flags)
-    - [closest / furthest -enemies](#closest-furthest-enemies)
+    - [closest / furthest enemies](#closest-furthest-enemies)
   + [evaluation](#evaluation)
-    - [evaluations interfaces](#evaluations-interfaces)
+    - [evaluation interfaces](#evaluation-interfaces)
     - [warfare data](#warfare-data)
   + [response](#response)
-* [External refences](#External-refences)
+* [External refences](#external-refences)
 
 
 
@@ -43,7 +43,7 @@ Instructions to install "R0-GR combat droid module":
 > npm run test
 ~~~
 
-
+[001]: v1-programming-interface
 # v1 : programming interface
 R0-GR combat droid module has an intentionally strict protocol priority without loosing flexibility to execute orders following the "covering or destroy" principle, prioriting human lifes (allies) | target urgency (mech) | enemy lines (distance).
 
@@ -55,7 +55,7 @@ To follow _good practices_ functionalities followed two main principles: isolati
 
 
 
-
+[002]: v0-the-pseudo-code
 # v0 : The Pseudo Code
 The core weapon action is to attack and protocols acts over **coordinates** and **enemies/type**.
 
@@ -100,7 +100,7 @@ Each protocol require specific attack configuration that is isolated to elaborat
 Work with flags are pretty much like filter values to include or exclude them. (select "flaged positive" items from scan property)
 
 
-#### closest / furthest -enemies
+#### closest / furthest enemies
 Coordinates from enemies location are given by y/x axis and distance is calculated getting hypotenuse. Then, enemis distance items are compared to reveal "closest / furthest" and the item is returned.
 
 Get **scan** property, consider valid **coordinates** object (a^2 + b^2 = h^2) range those under 100m farest, select closest / furthest enemies.
@@ -110,7 +110,7 @@ Get **scan** property, consider valid **coordinates** object (a^2 + b^2 = h^2) r
 R0-GR combat droid module receive [warfare data](#warfare-data) that algorithmic processes to interact with [evaluation interfaces](#evaluation-interfaces) that orchrestate a response.
 
 
-#### evaluations interfaces
+#### evaluation interfaces
 * basic : closest-enemies / furthest-enemies
 * mech (flag) : prioritize-mech / avoid-mech
 * allies (flag) : assist-allies / avoid-crossfire
