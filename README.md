@@ -1,6 +1,48 @@
 # Weapon Manual
 R0-GR combat droid module deploy attack based in protocols to select targets and/or actions over targets.
 
+### Index
+* [Installation](#installation)
+* [v1 : programming interface](#v1-programming-interface)
+  + [code structure](#code-structure)
+  + [module functiolaty](#module-functiolaty)
+* [v0 : The Pseudo Code](#v0-the-pseudo-code)
+  + [Assumptions](#assumptions)
+  + [Weapon response](#weapon-response)
+    - [protocols like flags](#protocols-like-flags)
+    - [closest / furthest -enemies](#closest-furthest-enemies)
+  + [evaluation](#evaluation)
+    - [evaluations interfaces](#evaluations-interfaces)
+    - [warfare data](#warfare-data)
+  + [response](#response)
+* [External refences](#External-refences)
+
+
+
+## Installation
+Instructions to install "R0-GR combat droid module":
+
+* npm packages
+~~~
+// packages installation
+> npm i
+~~~
+* dev mode
+~~~
+// run live over Typescript
+> npm run dev
+~~~
+* build
+~~~
+// run tsc compiler
+> npm run build
+~~~
+* test mode
+~~~
+// run compiled files
+> npm run test
+~~~
+
 
 # v1 : programming interface
 R0-GR combat droid module has an intentionally strict protocol priority without loosing flexibility to execute orders following the "covering or destroy" principle, prioriting human lifes (allies) | target urgency (mech) | enemy lines (distance).
@@ -42,21 +84,6 @@ attack_allowed : trigger_safety()
 ~~~
 
 
-#### closest / furthest -enemies
-Coordinates from enemies location are given by y/x axis and distance is calculated getting hypotenuse. Then, enemis distance items are compared to reveal "closest / furthest" and the item is returned.
-
-Get **scan** property, consider valid **coordinates** object (a^2 + b^2 = h^2) range those under 100m farest, select closest / furthest enemies.
-
-
-#### protocols like flags
-Work with flags are pretty much like filter values to include or exclude them. (select "flaged positive" items from scan property)
-
-
-## Weapon response
-<!-- ## evaluation interfaces -->
-Each protocol require specific attack configuration that is isolated to elaborate a single answer to a single petition.
-
-
 ## Assumptions
 Actions modifiers relay over **enemies/type** and **(optional)allies**.
 
@@ -65,8 +92,21 @@ Actions modifiers relay over **enemies/type** and **(optional)allies**.
 * multiple valid targets : attack the first valid target
 
 
+## Weapon response
+Each protocol require specific attack configuration that is isolated to elaborate a single answer to a single petition.
+
+
+#### protocols like flags
+Work with flags are pretty much like filter values to include or exclude them. (select "flaged positive" items from scan property)
+
+
+#### closest / furthest -enemies
+Coordinates from enemies location are given by y/x axis and distance is calculated getting hypotenuse. Then, enemis distance items are compared to reveal "closest / furthest" and the item is returned.
+
+Get **scan** property, consider valid **coordinates** object (a^2 + b^2 = h^2) range those under 100m farest, select closest / furthest enemies.
+
+
 ## evaluation
-<!-- #### Weapon response -->
 R0-GR combat droid module receive [warfare data](#warfare-data) that algorithmic processes to interact with [evaluation interfaces](#evaluation-interfaces) that orchrestate a response.
 
 
