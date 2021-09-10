@@ -1,2 +1,5 @@
 node_modules
 build
+DOCS.md
+test_cases.json
+test_cases_solutions.txt
