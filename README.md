@@ -3,14 +3,14 @@ R0-GR combat droid module deploy attack based in protocols to select targets and
 
 ### Index
 * [Installation](#installation)
-* [v1 : programming interface][001]
+* [v1 programming interface](#v1-programming-interface)
   + [code structure](#code-structure)
   + [module functiolaty](#module-functiolaty)
-* [v0 : The Pseudo Code][002]
+* [v0 The Pseudo Code](#v0-the-pseudo-code)
   + [Assumptions](#assumptions)
   + [Weapon response](#weapon-response)
     - [protocols like flags](#protocols-like-flags)
-    - [closest / furthest enemies](#closest-furthest-enemies)
+    - [closest or furthest enemies](#closest-or-furthest-enemies)
   + [evaluation](#evaluation)
     - [evaluation interfaces](#evaluation-interfaces)
     - [warfare data](#warfare-data)
@@ -43,8 +43,8 @@ Instructions to install "R0-GR combat droid module":
 > npm run test
 ~~~
 
-[001]: v1-programming-interface
-# v1 : programming interface
+
+# v1 programming interface
 R0-GR combat droid module has an intentionally strict protocol priority without loosing flexibility to execute orders following the "covering or destroy" principle, prioriting human lifes (allies) | target urgency (mech) | enemy lines (distance).
 
 ## code structure
@@ -54,9 +54,7 @@ Conceptually, R0-GR combat droid module, was externally created to be a "plug & 
 To follow _good practices_ functionalities followed two main principles: isolation and single purpose. Requirements were split into smallest parts as possible to bring a simple and clear progression of tasks. The main design priority was simplicity, clarity and scalability at long term.
 
 
-
-[002]: v0-the-pseudo-code
-# v0 : The Pseudo Code
+# v0 The Pseudo Code
 The core weapon action is to attack and protocols acts over **coordinates** and **enemies/type**.
 
 
@@ -100,7 +98,7 @@ Each protocol require specific attack configuration that is isolated to elaborat
 Work with flags are pretty much like filter values to include or exclude them. (select "flaged positive" items from scan property)
 
 
-#### closest / furthest enemies
+#### closest or furthest enemies
 Coordinates from enemies location are given by y/x axis and distance is calculated getting hypotenuse. Then, enemis distance items are compared to reveal "closest / furthest" and the item is returned.
 
 Get **scan** property, consider valid **coordinates** object (a^2 + b^2 = h^2) range those under 100m farest, select closest / furthest enemies.
