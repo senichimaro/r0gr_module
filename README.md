@@ -15,8 +15,8 @@ R0-GR combat droid module deploy attack based in protocols to select targets and
     - [evaluation interfaces](#evaluation-interfaces)
     - [warfare data](#warfare-data)
   + [response](#response)
+* [curl command](#curl-command)
 * [External refences](#external-refences)
-
 
 
 ## Installation
@@ -135,6 +135,14 @@ R0-GR combat droid module receive [warfare data](#warfare-data) that algorithmic
 
 ## response
 An action response is based in enemy distance and coordinates. If no distance requirements are given it decide to attack the first valid target.
+
+
+# curl command
+This is the command used with curl to test API results.
+~~~
+curl --silent -H "Content-Type: application/json" -X POST -d "@test.json" http://localhost:8888/radar
+~~~
+
 
 
 # External refences

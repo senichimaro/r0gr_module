@@ -3,3 +3,5 @@ build
 DOCS.md
 test_cases.json
 test_cases_solutions.txt
+tests.sh
+test.json
