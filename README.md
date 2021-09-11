@@ -1,7 +1,14 @@
 # Weapon Manual
 R0-GR combat droid module deploy attack based in protocols to select targets and/or actions over targets.
 
-See requiremenst in [MANUAL.md](MANUAL.md)
+See requiremenst in [MANUAL.md](MANUAL.md).
+
+> .env file is intentionally uploaded to the repo with the purpose of exposing a complete folders and files structure.
+
+> Errors are thrown for testing purposes.
+
+> Typescript compiler options are targeting ES5 because there were no explicit constraints about it. This version was selected beacause It is the most extended browser supported version of ECMAScript (Javascript v.2009 - the first major revision to JavaScript). ES5 is fully supported in all modern browsers. ES6 (alse known as ECMAScript 2015) was fully supported by Safari 10 and Edge 14 in 2016, Chrome 58 and Firefox 54 in 2017, and Opera 55 in 2018.
+
 
 ### Index
 * [Installation](#installation)
