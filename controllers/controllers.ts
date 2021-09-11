@@ -5,7 +5,7 @@ export async function getIndex(req,res){
         res.status(200).send({"success":true, "data":"Radar Activated"})
     }
     catch(e){
-        throw new Error(e.message);
+        throw new Error(`|>|>|${e.message}`);        
     }
 }
 
@@ -16,7 +16,6 @@ export async function radar_sensor(req,res){
         res.status(200).send(r0gr_response.objective)
     }
     catch(e){
-        throw new Error(`|>|>|${e.message}`);
-        
+        throw new Error(`|>|>|${e.message}`);        
     }
 }
