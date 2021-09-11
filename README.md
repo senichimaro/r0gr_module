@@ -3,6 +3,8 @@ R0-GR combat droid module deploy attack based in protocols to select targets and
 
 See requiremenst in [MANUAL.md](MANUAL.md).
 
+* R0-GR combat droid module is located in `./modules/r0gr_module.ts`
+
 > .env file is intentionally uploaded to the repo with the purpose of exposing a complete folders and files structure.
 
 > Errors are thrown for testing purposes.
