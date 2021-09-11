@@ -1,4 +1,4 @@
-import r0gr_module from '../r0gr_module'
+import r0gr_module from '../modules/r0gr_module'
 
 export async function getIndex(req,res){
     try{
@@ -12,7 +12,7 @@ export async function getIndex(req,res){
 export async function radar_sensor(req,res){
     try {
         const radar_warfare = req.body;        
-        const r0gr_response = new r0gr_module( radar_warfare )
+        const r0gr_response = new r0gr_module( radar_warfare )        
         res.status(200).send(r0gr_response.objective)
     }
     catch(e){
