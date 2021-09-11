@@ -1,7 +1,7 @@
 # Weapon Manual
 R0-GR combat droid module deploy attack based in protocols to select targets and/or actions over targets.
 
-See requiremenst in [MANUAL.md](MAUNAL.md)
+See requiremenst in [MANUAL.md](MANUAL.md)
 
 ### Index
 * [Installation](#installation)
